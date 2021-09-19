@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Bill Payment</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../static/admin/css/cssFundsTransfer.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../static/admin/css/mainDropDown.css">
+    <link rel="stylesheet" href="../static/admin/sidebar/css/style.css">
+
+  </head>
+  <body>
+  <!--Navigation bar-->
+
+  <nav class="zone blue1 sticky">   
+    <ul class="main-nav">
+
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+
+        <!-- <li class=""><a class="hellohome fa fa-home" href="/index"></a></li> -->
+
+
+        <li class="push">
+          <div class="dropdown">
+            <a class="" href="">My Account</a>
+            <div class="dropdown-content">
+              <a href="/">Dashboard</a>
+              <a href="">
+              <form action="/logout?_method=DELETE" method="POST">
+                <button class="logout" type="submit">Log Out&nbsp;&nbsp;&nbsp;&nbsp;</button>
+              </form></a>
+
+                <!-- <form action="/logout?_method=DELETE" method="POST">
+                  <button class="Logout" style="padding: 0; border: none; background: none; font-weight: bold; color: rgba(0,0,0,0.7); cursor:pointer;" type="submit">Log Out&nbsp;&nbsp;</button>
+                </form> -->
+              </div>
+            </div>
+
+        <!-- <li class="push"> -->
+          <!-- <div class="dropdown">
+            <a href="">Business</a>
+            <div class="dropdown-content">
+              <a href="/investment_banking">Investment Banking</a>
+            </div>
+          </div> -->
+        <!-- </li> -->
+
+        <!-- <li class="push"> -->
+          <!-- <div class="dropdown">
+            <a href="">About Us</a>
+            <div class="dropdown-content">
+              <a  href="/Introduction">Introduction</a>
+              <a  href="/our-brand">Our Brand</a>
+              <a  href="/History">History</a>
+            </div>
+          </div> -->
+        <!-- </li> -->
+
+        <!-- <li class="push"> -->
+          <!-- <div class="dropdown">
+            <a class="" href="">Contact Us</a>
+            <div class="dropdown-content">
+              <a href="/contact-detail">Contact Details</a>
+            </div>
+          </div> -->
+        <!-- </li> -->
+
+          </div>
+        </li>
+        
+
+</ul>
+<hr class="horizontalL">
+</nav>
+		<!--Sidebar-->
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="p-4 pt-5">
+          <h3 style="font-size: 20px; margin: 0px;"><Br><br> <%= name %> <Br></h3>
+            <ul class="list-unstyled components mb-5">
+
+	          <li>
+              <a href="/">Dashboard</a>
+	          </li>
+	          <li>
+              <a href="/debitcard">Debit Card</a>
+	          </li>
+	          <li>
+              <a href="/fundsTransfer">Funds Transfer</a>
+	          </li>
+	          <li>
+              <a href="/billPayment">Bill Payments</a>
+	          </li>
+	          <li>
+              <a href="/bank-statement">Bank Statements</a>
+	          </li>
+	          <li>
+              <a href="/order-chquebook">Order a cheque book</a>
+	          </li>
+	          <li>
+              <a href="/change-password">Change Password</a>
+            </li>
+	        </ul>
+	      </div>
+    	</nav>
+
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5" style="background-image: url(../static/admin/img/wall2.jpg)">	
+        <br><br>
+        <!-- Card to display-->
+        <div class="w3-container"><br>
+            <h3 class=fundsTransfer>Bill Payment</h3>
+
+            <div class="div_input1">
+            <form action="/billPayment" method=POST>
+
+                <label for="bank">Billing Company Selection</label>
+                <select id="bank" class="input1" name="bank">
+                <option value="SSGC">SSGC</option>
+                <option value="SNGPL">SNGPL</option>
+                <option value="HESCO">HESCO</option>
+                <option value="KE">KE</option>
+                <option value="UFONE PREPAID">UFONE PREPAID</option>
+                <option value="MOBILINK PREPAID">MOBILINK PREPAID</option>
+                <option value="TELENOR PREPAID">TELENOR PREPAID</option>
+                <option value="ZONG PREPAID">ZONG PREPAID</option>
+                <option value="UFONE POSTPAID">UFONE POSTPAID</option>
+                <option value="MOBILINK POSTPAID">MOBILINK POSTPAID</option>
+                <option value="TELENOR POSTPAID">TELENOR POSTPAID</option>
+                <option value="ZONG POSTPAID">ZONG POSTPAID</option>
+                <option value="LESCO">LESCO</option>
+                <option value="GEPCO">GEPCO</option>
+                <option value="PTCL DEFAULTER">PTCL DEFAULTER</option>
+                <option value="PTCL VFONE">PTCL VFONE</option>
+                <option value="PTCL LANDLINE">PTCL LANDLINE</option>
+                <option value="MEPCO">MEPCO</option>
+                <option value="KWSB">KWSB</option>
+                <option value="PESCO">PESCO</option>
+                <option value="FWASA">FWASA</option>
+                </select>
+
+                <label for="account">Account#</label>
+                <input type="text" id="account" class="input1" name="account" required><br>
+
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" class="input1" name="amount" placeholder="in Rupees" min="100" max="1000000" required><br>
+
+                <label for="submit"></label>            
+                <input type="submit" class="button input1" value="Submit"> 
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= msg %></p>
+
+            </form>
+            </div>
+
+        </div>         
+          
+    </div>   
+      
+    </div>
+
+
+
+      
+  </body>
+</html>
+

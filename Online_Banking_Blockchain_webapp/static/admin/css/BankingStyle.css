@@ -1,0 +1,242 @@
+body{
+	margin: 0px;
+	margin-bottom: 25px;
+	background-image: url(../img/wall2.jpg);
+	background-size: cover;
+}
+header{
+	border-bottom: 0px solid rgba(239,176,87,1);
+	background-color: rgba(239,176,87,1);
+	height: 80px;
+	background-image: url(../img/default1.JPG);
+	background-size: 300px 70px;
+	background-repeat: no-repeat;
+	font-weight: bold;
+	font-size: 3em;
+	font-family: calibri;
+}
+
+.h3_chequebook, .h3_changepassword, .h3_bankstatements{
+	margin: 20px;
+	margin-left: 0px;
+	font-size: 38px;
+	font-weight: bold;
+	text-shadow: 10px 10px 10px #888888;
+	font-family: calibri;
+}
+
+ .h3_changepassword{
+	margin: 20px;
+	margin-top: 0px;
+	margin-left: 0px;
+	font-size: 38px;
+	font-weight: bold;
+	text-shadow: 10px 10px 10px #888888;
+	font-family: calibri;
+}
+
+
+
+.h3_login{
+	margin: 20px;
+	margin-left: 60px;
+	margin-bottom: 0px;
+	font-size: 50px;
+	font-weight: bold;
+	text-shadow: 10px 10px 10px #888888;
+	font-family: calibri;
+}
+
+ .ATMBranchLocation{
+	font-size:1.5em;
+	font-weight: bold;
+	font-family: calibri;
+}
+ .ATMBranchLocationPP{
+ 	font-size:1.5em;
+	font-family: calibri;
+	color: rgba(0,0,0,0.6);
+ }
+.BstatementTTL{
+	text-align: center;
+	margin: 10px;
+	font-size: 2em;
+
+}
+.hh3{
+	font-family: calibri;
+	font-size: 2em;
+	background-color: rgba(239,176,87,1);
+	width: 6em;
+}
+.introHIS{
+	font-family: calibri;
+	font-size: 1.25em;
+	
+}
+.contact-usH{
+ 	font-family: calibri;
+ 	font-size: 1.8em;
+ 	font-weight: bold;
+ 	color: orange;
+ 	line-height: 5px;
+ 	margin: 5px;
+ 	padding: 5px;
+ }
+.contact-us{
+  	font-family: calibri;
+  	font-size: 1.5em;
+  	color: rgba(0,0,0,0.6);
+  	line-height: 28px;
+  	margin: 5px;
+ 	padding: 5px;
+ }
+label{
+	font-size: 25px;
+	line-height: 20px;
+	font-family: calibri;
+}
+.form-control{
+	line-height: 25px;
+	border-radius: 5px;
+	width: 25em;
+	font-size: 16px;
+	font-family: calibri;
+	box-shadow: 10px 10px 10px #888888;
+}
+select{
+	height: 30px;
+}
+.container{
+	margin: 3.5em;
+	float: left;
+}
+.btn{
+	line-height: 30px;
+	border-radius: 5px;
+	width: 14em;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: rgba(204, 113, 11,0.8);
+	border-color: rgba(204, 113, 11,0.8);
+	box-shadow: 10px 10px 10px #888888;
+	font-family: calibri;
+}
+.btn1{
+	line-height: 30px;
+	border-radius: 5px;
+	width: 10em;
+	margin: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: rgba(204, 113, 11,0.8);
+	border-color: rgba(204, 113, 11,0.8);
+	box-shadow: 10px 10px 10px #888888;
+	font-family: calibri;
+}
+.btn:hover{
+	background-color: rgba(204, 113, 11,0.9);
+	border-color: rgba(204, 113, 11,0.9);
+	box-shadow: 10px 10px 10px #888888;
+	transform: scale(1.009);
+}
+
+.cheque{
+	background-color: rgba(204, 113, 11,0.7);
+	border-color: rgba(204, 113, 11,0.7);
+	width: 30em;
+	height: 18em;
+	float: right;
+	line-height: 20px;
+	padding: 15px;
+	margin-right: 10em;
+	margin-top: 10em;
+	font-weight: bold;
+	box-shadow: 10px 10px 10px #888888;
+	font-family: calibri;
+
+}
+.chequeLI{
+	padding: 7px;
+}
+.BstatementPAGE{
+	background-color: rgb(255, 255, 255);
+	border-color: rgb(255, 255, 255);
+	box-shadow: 15px 15px 15px #888888;
+	margin: 3em;
+	margin-top: 8px;
+	padding: 50px
+}
+img{
+	height: 12em;
+	height: 12em;
+	border-radius: 360px;
+	transition: all 1s;
+	box-shadow: 10px 10px 10px black;
+}
+img:hover{
+	transform: scale(1.03);
+}
+.REGcontainer{
+	background-color: rgba(204, 113, 11,0.8);
+	border-color: rgba(204, 113, 11,0.8);
+	width: 27em;
+	line-height: 20px;
+	padding-left: 40px;
+	padding-right: 15px;
+	padding-bottom: 25px;
+	padding-top: 25px;
+	margin-left: 3em;
+	/*border-left: 120px;*/
+	margin-top: 6em;
+	box-shadow: 10px 10px 10px #888888;
+	font-family: calibri;
+	border-radius: 45px;
+}
+h2{
+	margin: 50px;
+	font-size: 3em;
+	font-weight: bold;
+	font-family: calibri;
+}
+.signup{
+	box-shadow: none;
+}
+.REGbtn{
+	box-shadow: none;
+	line-height: 30px;
+	border-radius: 5px;
+	width: 10em;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: #5E5042;
+	border-color: #5E5042;
+	font-family: calibri;
+	border-radius: 45px;
+}
+.REGbtn:hover{
+	box-shadow: none;
+	/*transform: scale(1.009);*/
+	background-color: #874F0B;
+	border-color: #874F0B;
+}
+span{
+	font-weight: bold;
+	text-decoration: underline;
+	color: rgba(0,0,0,0.7);
+}
+.branch-location{
+	text-decoration: underline;
+	color: #0E0AC3;
+}
+ .brand{
+ 	font-family: calibri;
+ 	color: orange;
+ 	font-size: 20px;
+ 	margin: 5px;
+ 	padding: 5px;
+ }
+
+.sidebar{
+ 	margin-bottom: 10px;
+ }

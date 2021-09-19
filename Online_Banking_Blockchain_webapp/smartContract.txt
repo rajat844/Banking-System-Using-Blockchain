@@ -1,0 +1,31 @@
+pragma solidity ^0.8.7;
+contract transaction{
+    
+    string sender_acc;
+    uint amount;
+    uint leaves;
+    string receiver_acc;
+    
+    constructor() public{
+        sender_acc="";
+        amount=0;
+        receiver_acc="";
+    }
+    
+    function transferFunds(string s, uint a, string r) public{
+        sender_acc=s;
+        amount=a;
+        receiver_acc=r;
+    }
+    
+    function storeRequestedCheckbooks(string s, uint l) public{
+        sender_acc=s;
+        leaves=l;
+    }
+    
+    function getDetails() public view returns(string , uint , string){
+        return (sender_acc,amount,receiver_acc);
+    }
+
+
+}

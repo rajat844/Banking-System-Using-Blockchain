@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="/static/admin/css/mainDropDown.css">
+		<link rel="stylesheet" href="/static/admin/sidebar/css/style.css">
+    <style>
+  </style> 
+  
+
+  </head>
+  <body>
+  <!--Navigation bar-->
+
+  <!--Navigation bar-->
+
+  <nav class="zone blue1 sticky">   
+    <ul class="main-nav">
+
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+
+        <!-- <li class=""><a class="hellohome fa fa-home" href="/index"></a></li> -->
+
+        <li class="push">
+            <div class="dropdown">
+              <a href="/admin_sidebar">Dashboard</a>  
+            </div>
+        </li>
+
+        <li class="push">
+          <div class="dropdown">
+            <a href="" >Blockchain</a>
+            <div class="dropdown-content">
+              <a href="/MoneyRecordsBlockchain">Money Transfer Record</a>
+              <a href="/BillRecordsBlockchain">Bill Payment Record</a>
+              <a href="/CheckbookRecordsBlockchain">Checkbook Orders Record</a>
+            </div>
+          </div>
+        </li>
+
+
+        <li class="push">
+            <div class="dropdown">
+                <form action="/logout?_method=DELETE" method="POST">
+                    <button class="logout" type="submit" style="color: rgba(0, 0, 0, 0.651); font-weight: bold;";
+                    >Log Out</button>
+                  </form>
+    
+            </div>
+        </li>
+        
+        <li class="push">
+            <div class="dropdown">
+                <a href="#"></a>
+            </div>
+        </li>
+
+</ul>
+<hr class="horizontalL">
+</nav>
+
+     <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5" style=" word-wrap:break-word; color:white; background-color: #FAE5D3; ">	
+      <br><br>
+          <p><%- blkn %></p>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+      
+  </body>
+</html>
+

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Funds Transfer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../static/admin/css/cssFundsTransfer.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../static/admin/css/mainDropDown.css">
+    <link rel="stylesheet" href="../static/admin/sidebar/css/style.css">
+
+    
+  </head>
+  <body>
+  <!--Navigation bar-->
+
+  <nav class="zone blue1 sticky">   
+    <ul class="main-nav">
+
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+
+        <!-- <li class=""><a class="hellohome fa fa-home" href="/index"></a></li> -->
+
+
+        <li class="push">
+          <div class="dropdown">
+            <a class="" href="">My Account</a>
+            <div class="dropdown-content">
+              <a href="/">Dashboard</a>
+              <a href="">
+              <form action="/logout?_method=DELETE" method="POST">
+                <button class="logout" type="submit">Log Out&nbsp;&nbsp;&nbsp;&nbsp;</button>
+              </form></a>
+
+                <!-- <form action="/logout?_method=DELETE" method="POST">
+                  <button class="Logout" style="padding: 0; border: none; background: none; font-weight: bold; color: rgba(0,0,0,0.7); cursor:pointer;" type="submit">Log Out&nbsp;&nbsp;</button>
+                </form> -->
+              </div>
+            </div>
+
+        <!-- <li class="push"> -->
+          <!-- <div class="dropdown">
+            <a href="">Business</a>
+            <div class="dropdown-content">
+              <a href="/investment_banking">Investment Banking</a>
+            </div>
+          </div> -->
+        <!-- </li> -->
+
+        <!-- <li class="push"> -->
+          <!-- <div class="dropdown">
+            <a href="">About Us</a>
+            <div class="dropdown-content">
+              <a  href="/Introduction">Introduction</a>
+              <a  href="/our-brand">Our Brand</a>
+              <a  href="/History">History</a>
+            </div>
+          </div> -->
+        <!-- </li> -->
+
+        <!-- <li class="push"> -->
+          <!-- <div class="dropdown">
+            <a class="" href="">Contact Us</a>
+            <div class="dropdown-content">
+              <a href="/contact-detail">Contact Details</a>
+            </div>
+          </div> -->
+        <!-- </li> -->
+
+          </div>
+        </li>
+        
+
+</ul>
+<hr class="horizontalL">
+</nav>
+
+
+<br><Br>
+
+		<!--Sidebar-->
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="p-4 pt-5">
+          <h3 style="font-size: 20px; margin: 0px;"><Br><br> <%= name %> <Br></h3>
+            <ul class="list-unstyled components mb-5">
+
+	          <li>
+              <a href="/">Dashboard</a>
+	          </li>
+	          <li>
+              <a href="/debitcard">Debit Card</a>
+	          </li>
+	          <li>
+              <a href="/fundsTransfer">Funds Transfer</a>
+	          </li>
+	          <li>
+              <a href="/billPayment">Bill Payments</a>
+	          </li>
+	          <li>
+              <a href="/bank-statement">Bank Statements</a>
+	          </li>
+	          <li>
+              <a href="/order-chquebook">Order a cheque book</a>
+	          </li>
+	          <li>
+              <a href="/change-password">Change Password</a>
+            </li>
+	        </ul>
+	      </div>
+    	</nav>
+
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5" style="background-image: url(../static/admin/img/wall2.jpg)">	
+        <br><br>
+        <!-- Card to display-->
+        <div class="w3-container">
+            <h3 class=fundsTransfer>Debit Card Info</h3>
+
+            <div class="div_input1">
+            <form action="/debitcard" method=POST>
+
+                <div class="row">
+                  <div class="column">
+                    <div class="keeptogether">
+                    <img src="../static/admin/img/img_avatar.png" alt="Avatar" style="width:40%; height: 55%; " >
+                    <br>
+  
+                    <input type="radio" id="card_status1" name="card" value="Activated" checked>
+  
+                    <label >Activate</label><br>
+                    
+                    <input  type="radio" id="card_status2" name="card" value="Deactivated">
+                    
+                    <label >Deactivate</label><br> 
+  
+                    <input type="submit" class="button input1" value="Submit"> 
+  
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="keeptogether" style="font-size: 25px;">
+                  <BR>
+                  <p > <%= name %></p>
+                  <p > <%= DebitCard %></p>
+                  <p id="para" style="color: orange; font-weight: bold; "><%=card_status%></p>
+                  </div>
+                </div>
+                </div>                                           
+            </form>
+            </div>
+
+        </div>         
+          
+    </div>   
+      
+    </div>
+
+
+         <script src="../static/admin/js/js_debitcard.js"></script>
+ 
+  </body>
+</html>
+

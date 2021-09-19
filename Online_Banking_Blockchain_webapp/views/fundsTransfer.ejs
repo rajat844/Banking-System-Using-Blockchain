@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Funds Transfer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../static/admin/css/cssFundsTransfer.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../static/admin/css/mainDropDown.css">
+    <link rel="stylesheet" href="../static/admin/sidebar/css/style.css">
+
+    
+  </head>
+  <body>
+  <!--Navigation bar-->
+
+  <nav class="zone blue1 sticky">   
+    <ul class="main-nav">
+
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+
+        <!-- <li class=""><a class="hellohome fa fa-home" href="/index"></a></li> -->
+
+
+        <li class="push">
+          <div class="dropdown">
+            <a class="" href="">My Account</a>
+            <div class="dropdown-content">
+              <a href="/">Dashboard</a>
+              <a href="">
+              <form action="/logout?_method=DELETE" method="POST">
+                <button class="logout" type="submit">Log Out&nbsp;&nbsp;&nbsp;&nbsp;</button>
+              </form></a>
+
+                <!-- <form action="/logout?_method=DELETE" method="POST">
+                  <button class="Logout" style="padding: 0; border: none; background: none; font-weight: bold; color: rgba(0,0,0,0.7); cursor:pointer;" type="submit">Log Out&nbsp;&nbsp;</button>
+                </form> -->
+              </div>
+            </div>
+
+        <!-- <li class="push"> -->
+          <!-- <div class="dropdown">
+            <a href="">Business</a>
+            <div class="dropdown-content">
+              <a href="/investment_banking">Investment Banking</a>
+            </div>
+          </div> -->
+        <!-- </li> -->
+
+        <!-- <li class="push"> -->
+          <!-- <div class="dropdown">
+            <a href="">About Us</a>
+            <div class="dropdown-content">
+              <a  href="/Introduction">Introduction</a>
+              <a  href="/our-brand">Our Brand</a>
+              <a  href="/History">History</a>
+            </div>
+          </div> -->
+        <!-- </li> -->
+
+        <!-- <li class="push"> -->
+          <!-- <div class="dropdown">
+            <a class="" href="">Contact Us</a>
+            <div class="dropdown-content">
+              <a href="/contact-detail">Contact Details</a>
+            </div>
+          </div> -->
+        <!-- </li> -->
+
+          </div>
+        </li>
+        
+
+</ul>
+<hr class="horizontalL">
+</nav>
+
+<br><Br>
+
+		<!--Sidebar-->
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="p-4 pt-5">
+          <h3 style="font-size: 20px; margin: 0px;"><Br><br> <%= name %> <Br></h3>
+            <ul class="list-unstyled components mb-5">
+
+	          <li>
+              <a href="/">Dashboard</a>
+	          </li>
+	          <li>
+              <a href="/debitcard">Debit Card</a>
+	          </li>
+	          <li>
+              <a href="/fundsTransfer">Funds Transfer</a>
+	          </li>
+	          <li>
+              <a href="/billPayment">Bill Payments</a>
+	          </li>
+	          <li>
+              <a href="/bank-statement">Bank Statements</a>
+	          </li>
+	          <li>
+              <a href="/order-chquebook">Order a cheque book</a>
+	          </li>
+	          <li>
+              <a href="/change-password">Change Password</a>
+            </li>
+	        </ul>
+	      </div>
+    	</nav>
+
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5" style="background-image: url(../static/admin/img/wall2.jpg)">	
+        <br><br>
+        <!-- Card to display-->
+        <div class="w3-container">
+            <h3 class=fundsTransfer>Funds Transfer </h3>
+
+            <div class="div_input1">
+            <form action="/fundsTransfer" method=POST>
+                <label for="fname" >Full Name</label>
+                <input type="text" id="fname" class="input1" name="fname" placeholder="Your name.." pattern="^([a-zA-Z]+|[a-zA-Z]+\s{1}[a-zA-Z]{1,}|[a-zA-Z]+\s{1}[a-zA-Z]{3,}\s{1}[a-zA-Z]{1,})$" required><br>
+
+                <label for="account">Account#</label>
+                <input type="text" id="account" class="input1" name="account" required><br>
+
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" class="input1" name="amount" placeholder="in Rupees" min="100" max="1000000" required><br>
+
+                <label for="bank">Select Bank</label>
+                <select id="bank" class="input1" name="bank">
+                <option value="Scarlet Bank">Scarlet Bank</option>
+                <option value="Meezan Bank">Meezan Bank</option>
+                <option value="Allied Bank">Allied Bank</option>
+                <option value="Askari Bank">Askari Bank</option>
+                <option value="Bank Al-Habib">Bank Al-Habib</option>
+                <option value="Bank Alfalah">Bank Alfalah</option>
+                <option value="Bank of Punjab">Bank of Punjab</option>
+                <option value="Bankislami">Bankislami</option>
+                <option value="Burj Bank">Burj Bank</option>
+                <option value="CitiBank">CitiBank</option>
+                <option value="Dubai Islamic">Dubai Islamic</option>
+                <option value="Faysal Bank">Faysal Bank</option>
+                <option value="Habib Metro">Habib Metro</option>
+                <option value="JS Bank">JS Bank</option>
+                <option value="MCB">MCB</option>
+                <option value="NBP">NBP</option>
+                <option value="Samba Bank">Samba Bank</option>
+                <option value="Silk Bank">Silk Bank</option>
+                <option value="Sindh Bank">Sindh Bank</option>
+                <option value="Soneri Bank">Soneri Bank</option>
+                <option value="Summit Bank">Summit Bank</option>
+                </select>
+
+                <label for="submit"></label>            
+                <input type="submit" class="button input1" value="Submit"> <!--onclick=func()-->
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= msg %></p>
+              </form>
+            </div>
+
+        </div>         
+          
+    </div>   
+      
+    </div>
+
+
+      
+  </body>
+</html>
+

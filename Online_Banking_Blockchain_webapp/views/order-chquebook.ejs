@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Request ChequeBook</title>
+	<script type="BankingJS.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../static/admin/css/BankingStyle.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="../static/admin/css/mainDropDown.css">
+  <link rel="stylesheet" href="../static/admin/sidebar/css/style.css">
+
+
+	<header></header>
+	
+</head>
+<body>
+  <!--Navigation bar-->
+
+  <nav class="zone blue1 sticky">   
+    <ul class="main-nav">
+
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+
+        <!-- <li class=""><a class="hellohome fa fa-home" href="/index"></a></li> -->
+
+
+        <li class="push">
+          <div class="dropdown">
+            <a class="" href="">My Account</a>
+            <div class="dropdown-content">
+              <a href="/">Dashboard</a>
+              <a href="">
+              <form action="/logout?_method=DELETE" method="POST">
+                <button class="logout" type="submit">Log Out&nbsp;&nbsp;&nbsp;&nbsp;</button>
+              </form></a>
+
+                <!-- <form action="/logout?_method=DELETE" method="POST">
+                  <button class="Logout" style="padding: 0; border: none; background: none; font-weight: bold; color: rgba(0,0,0,0.7); cursor:pointer;" type="submit">Log Out&nbsp;&nbsp;</button>
+                </form> -->
+              </div>
+            </div>
+
+        <!-- <li class="push"> -->
+          <!-- <div class="dropdown">
+            <a href="">Business</a>
+            <div class="dropdown-content">
+              <a href="/investment_banking">Investment Banking</a>
+            </div>
+          </div> -->
+        <!-- </li> -->
+
+        <!-- <li class="push"> -->
+          <!-- <div class="dropdown">
+            <a href="">About Us</a>
+            <div class="dropdown-content">
+              <a  href="/Introduction">Introduction</a>
+              <a  href="/our-brand">Our Brand</a>
+              <a  href="/History">History</a>
+            </div>
+          </div> -->
+        <!-- </li> -->
+
+        <!-- <li class="push"> -->
+          <!-- <div class="dropdown">
+            <a class="" href="">Contact Us</a>
+            <div class="dropdown-content">
+              <a href="/contact-detail">Contact Details</a>
+            </div>
+          </div> -->
+        <!-- </li> -->
+
+          </div>
+        </li>
+        
+
+</ul>
+<hr class="horizontalL">
+</nav>
+
+		<!--Sidebar-->
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="p-4 pt-5">
+          <h3 style="font-size: 20px; margin: 0px;"><Br><br> <%= name %> <Br></h3>
+            <ul class="list-unstyled components mb-5">
+
+	          <li>
+              <a href="/">Dashboard</a>
+	          </li>
+	          <li>
+              <a href="/debitcard">Debit Card</a>
+	          </li>
+	          <li>
+              <a href="/fundsTransfer">Funds Transfer</a>
+	          </li>
+	          <li>
+              <a href="/billPayment">Bill Payments</a>
+	          </li>
+	          <li>
+              <a href="/bank-statement">Bank Statements</a>
+	          </li>
+	          <li>
+              <a href="/order-chquebook">Order a cheque book</a>
+	          </li>
+	          <li>
+              <a href="/change-password">Change Password</a>
+            </li>
+	        </ul>
+	      </div>
+    	</nav>
+
+
+<!-- page content -->
+			<form action='/order-chquebook' method="POST">
+				<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+            <h3 class="h3_chequebook">Request a Cheque Book</h3>
+					    <!-- <label for="AccountNumCheque">Account Number</label>					    
+					    <div class="form-group pass_show"> 
+			                <input type="text" id="AccountNumCheque" class="form-control" name="AccountNumCheque" placeholder="Account Number" required><br><br>
+			            </div>  -->
+					    <label for="Leaves">Number of Leaves</label>
+			            <div class="form-group pass_show"> 
+			           		<select id="Leaves" name="Leaves" class="form-control" required>
+								<option value="50">50 Leaves</option>
+								<option value="100">100 Leaves</option>
+								<option value="200">200 Leaves</option>
+								<option value="250">250 Leaves</option>
+							</select>
+			            </div> 
+			            <div>
+                    <br><input type="submit" class="btn" value="Order Cheque Book">
+                    <p style="color: rgb(167, 0, 0); 
+                              font-weight: bolder; size: 27px;
+                              ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;<%= checkbook_Error %></p>
+    
+			            </div>
+					</div>  
+				</div>
+			</div>
+		</form>
+		<div class="cheque">
+			<h2 style="margin-left: 45px;">Important</h2>
+			<ul>
+				<li class="chequeLI">ChequeBook may be collected from your branch after 10 working days.</li>
+				<li class="chequeLI">Please call your branch to confirm that your ChequeBook is ready for collection.</li>
+				<li class="chequeLI">Please note that ChequeBooks not collected within 90 days will be destroyed.</li>
+			</ul>
+		</div>
+</body>
+</html>

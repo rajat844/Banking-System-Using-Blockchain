@@ -1,0 +1,157 @@
+/***********************************************************************
+ *  Bank Accounts
+ **********************************************************************/
+
+ body {
+    margin: 0 auto;
+	font-family: ProzaLibre-ExtraBold;
+}
+
+.zone {
+    /*padding:30px 50px;*/
+    cursor:pointer;
+    color:#FFF;
+    font-size:2em;
+    border-radius:4px;
+    border:1px solid #bbb;
+    transition: all 0.3s linear;
+}
+
+.zone:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+
+/***********************************************************************
+ *  Cover
+ **********************************************************************/
+.container {
+    /*show heigh: auto*/
+    height: 25vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover {
+    width: 30rem;
+}
+
+/***********************************************************************
+ *  Grid Panel
+ **********************************************************************/
+
+ html { 
+    background: url(../img/wall2.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	font-family: ProzaLibre-ExtraBold;
+  }
+
+ .grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 20px;
+
+}
+
+
+.box {
+    background-color: #444;
+    font-size: 0.5em;
+    text-align: center;
+    padding: 30px;
+    margin: 50px;
+}
+
+
+.box:hover {
+    -webkit-transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+    -o-transform: rotate(-7deg);
+	transform: scale(1.1);
+}
+
+.box > a> img {
+    width: 100%;
+    height: 100%;
+}
+
+.box > img {
+    width: 100%;
+    height: 100%;
+}
+
+ .box >p { 
+    position: absolute; 
+    font-size: 0.3em;
+    width: 100%; 
+ } 
+
+  
+/***********************************************************************
+ *  Footer
+ **********************************************************************/
+footer {
+    text-align: center;
+    background-color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+/*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
+
+.green {
+}
+
+.red {
+}
+
+.ftr {
+    background-color: #eca136;
+    font-family: ProzaLibre-ExtraBold;
+
+}
+
+/***********************************************************************
+ *  Blue Background
+ **********************************************************************/
+.blue1 {
+	border-bottom: 0px solid rgba(239,176,87,1);
+	background-color: rgba(239,176,87,1);
+	height: 80px;
+	background-image: url(../img/default1.JPG);
+	background-size: 300px 70px;
+	background-repeat: no-repeat;
+	font-family: ProzaLibre-ExtraBold;
+	font-weight: bold;
+	font-size: 3em;
+}
+
+.blue {
+    background-color: rgba(239,176,87,0.6);
+    font-family: ProzaLibre-ExtraBold;
+
+}
+
+h1{
+    text-align: center;
+    padding-top: 180px;
+	font: bold 60px 'Open Sans', sans-serif;
+	text-shadow: 0 0 6px rgb(0, 0, 0), 0 0 6px rgb(0, 0, 0);
+	color: #fff;
+	margin-bottom: 15px;
+}
+
+h2{
+    text-align: center;
+	font: normal 28px 'Open Sans', sans-serif;
+	text-shadow: 0 0 6px rgb(0, 0, 0), 0 0 6px rgb(0, 0, 0);
+	color: #fff;
+	margin-bottom: 40px;
+}

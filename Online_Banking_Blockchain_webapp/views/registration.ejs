@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>signUp/Registration</title>
+	<script type="BankingJS.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/admin/css/mainDropDown.css">
+	<link rel="stylesheet" type="text/css" href="/static/admin/css/BankingStyle.css">
+	<header></header>
+</head>
+	<body>
+
+
+  <nav class="zone blue1 sticky">   
+    <ul class="main-nav">
+
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+
+        <li class=""><a class="hellohome fa fa-home" href="/index"></a></li>
+
+
+        <li class="push">
+          <div class="dropdown">
+            <a  href="">Personal</a>
+            <div class="dropdown-content">
+              <a  href="/Bank_accounts">Bank Accounts</a>
+              <a  href="/consumer_finance">Consumer Finance</a>
+              <a  href="/cards">Debit/Credit Cards</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="push">
+          <div class="dropdown">
+            <a href="">Business</a>
+            <div class="dropdown-content">
+              <a href="/investment_banking">Investment Banking</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="push">
+          <div class="dropdown">
+            <a href="">About Us</a>
+            <div class="dropdown-content">
+              <a  href="/Introduction">Introduction</a>
+              <a  href="/our-brand">Our Brand</a>
+              <a  href="/History">History</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="push">
+          <div class="dropdown">
+            <a class="" href="">Contact Us</a>
+            <div class="dropdown-content">
+              <a href="/contact-detail">Contact Details</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="push">
+          <div class="dropdown">
+            <a href="" >Internet Banking Login</a>
+            <div class="dropdown-content">
+              <a href="/login">Log in</a>
+              <a href="/registration">Sign Up</a>
+            </div>
+          </div>
+        </li>
+        
+
+</ul>
+<hr class="horizontalL">
+</nav>
+
+
+
+
+
+  <!-- registration page -->
+      <form action="/registration" method="POST">
+        <div class="REGcontainer">
+        <h2>Sign Up</h2>
+        <div class="row">
+          <div class="col-sm-4">
+              <label for="name">Name</label>             
+              <div class="form-group pass_show"> 
+                  <input type="text" class="form-control signup" id="name" name="name" required><br><br>
+              </div>
+
+              <label for="CNIC">CNIC</label>             
+              <div class="form-group pass_show"> 
+                  <input type="hidd" class="form-control signup" id="CNIC" name="CNIC" placeholder="12345-1234567-1" pattern="[0-9]{5}-[0-9]{7}-[0-9]{1}" required><br><br>
+              </div>
+
+              <label for="DOB">Date of Birth</label>
+              <div class="form-group pass_show"> 
+                <input type="Date" id="DOB" class="form-control signup" name="DOB" required><br><br>
+              </div>
+
+              <label for="DebitCard">Debit Card Number</label>
+              <div class="form-group pass_show">
+                <input type="tel" id="DebitCard" class="form-control signup" name="DebitCard" placeholder="1234-1234-1234-1234"><br><br>
+              </div>
+
+
+
+              <label for="PIN">Debit Card PIN</label>
+              <div class="form-group pass_show">
+                <input type="tel" id="PIN" class="form-control signup" name="PIN"><br><br>
+              </div>
+
+              <label for="AccountNum">Account Number</label>
+              <div class="form-group pass_show">
+                <input type="tel" id="AccountNum" class="form-control signup" name="AccountNum" placeholder=" Account Number" required><br><br>
+              </div>
+
+              <!-- <label for="email">Login ID</label>
+              <div class="form-group pass_show"> 
+                <input type="email" class="form-control signup" id="email" name="email" required placeholder=" example@gmail.com" required><br><br>
+              </div>  -->
+
+              <label for="password">Create Login ID</label>
+              <label>Password</label>
+              <div class="form-group pass_show"> 
+                  <input type="password" id="password" class="form-control signup" name="password" placeholder=" Password" minlength="7" required><br><br>
+              </div> 
+
+              <label for="ConfirmPassword">Confirm Password</label>
+              <div class="form-group pass_show"> 
+                  <input type="password" id="ConfirmPassword" class="form-control signup" name="ConfirmPassword" placeholder=" Confirm Password" required><br><br>
+              </div>
+
+              <div>
+                <br><input type="submit" class="btn REGbtn" value="Register"><br><br>
+                <p style="color: rgb(167, 0, 0); font-weight: bold; size: 25px;"><%= error1 %></p>
+                <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+              </div> 
+          </div>  
+        </div>
+      </div>
+    </form>
+	</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Internet Banking</title>
+	<script type="BankingJS.js"></script>
+  <script type="text/javascript" src="server.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/admin/css/mainDropDown.css">
+	<link rel="stylesheet" type="text/css" href="/static/admin/css/BankingStyle.css">
+	<header></header>
+</head>
+<body>
+  <h1 class= "h3_login">Internet Banking</h1>
+  
+  <!--Navigation bar-->
+  <nav class="zone blue1 sticky">   
+    <ul class="main-nav">
+
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+        <li class="push"><a  href=""></a></li>
+
+        <li class=""><a class="hellohome fa fa-home" href="/index"></a></li>
+
+
+        <li class="push">
+          <div class="dropdown">
+            <a  href="">Personal</a>
+            <div class="dropdown-content">
+              <a  href="/Bank_accounts">Bank Accounts</a>
+              <a  href="/consumer_finance">Consumer Finance</a>
+              <a  href="/cards">Debit/Credit Cards</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="push">
+          <div class="dropdown">
+            <a href="">Business</a>
+            <div class="dropdown-content">
+              <a href="/investment_banking">Investment Banking</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="push">
+          <div class="dropdown">
+            <a href="">About Us</a>
+            <div class="dropdown-content">
+              <a  href="/Introduction">Introduction</a>
+              <a  href="/our-brand">Our Brand</a>
+              <a  href="/History">History</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="push">
+          <div class="dropdown">
+            <a class="" href="">Contact Us</a>
+            <div class="dropdown-content">
+              <a href="/contact-detail">Contact Details</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="push">
+          <div class="dropdown">
+            <a href="" >Internet Banking Login</a>
+            <div class="dropdown-content">
+              <a href="/login">Log in</a>
+              <a href="/registration">Sign Up</a>
+            </div>
+          </div>
+        </li>
+        
+</ul>
+<hr class="horizontalL">
+</nav>
+
+
+
+		<form action="/login" method="POST">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+            
+              <label for="AccountNum">Account Number</label>
+              <div class="form-group pass_show">
+                <input type="tel" id="AccountNum" class="form-control signup" name="AccountNum" placeholder=" Account Number" required><br><br>
+              </div>
+
+			       <label for="password">Password</label>
+					   <div class="form-group pass_show"> 
+			         <input type="password" id="password" class="form-control" name="password" placeholder=" Password" required><br><br>
+			       </div>
+
+			       <div>
+               <br><input type="submit" class="btn" value="Login">
+               <!-- <div class="form-group pass_show"> -->
+                <a href="/admin">
+                  <button type="button" class="btn">Login As Admin!</button>
+                  </a>
+                  <!-- </div><br><Br> -->
+
+			       </div>
+             <br>
+
+              <div style="font-weight: bold;
+                          color: white;
+                          font-size: 1.5em;
+                          background-color: rgba(204, 90, 0,0.8);
+                          width: 13em;
+                          box-shadow: 5px 5px 5px black;
+                          text-align: center;
+                          border-radius: 120px;
+                          font-family: calibri;
+                          ">
+                <% if (messages.error) { %>
+                  <%= messages.error %>
+                <% } %>
+              </div>
+
+					</div>  
+				</div>
+			</div>
+		</form>
+		<a href="/registration">
+      <p></p>
+      <p></p>
+			<img src="https://st.depositphotos.com/1842905/1502/v/950/depositphotos_15026037-stock-illustration-vector-button-register.jpg">
+		</a>
+	</body>
+</html>
