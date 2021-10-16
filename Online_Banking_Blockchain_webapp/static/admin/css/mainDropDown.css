@@ -66,9 +66,9 @@ width: 100%;
 .dropdown {
   position: relative;
   display: inline-block; 
-  border-left-right: 5px; 
+  border-right: 5px; 
   border-left: 5px;
-  margin-left-right: 5px; 
+  margin-right: 5px; 
   margin-left: 5px;
 }
 
@@ -79,7 +79,7 @@ width: 100%;
   position: absolute;
   background-color: #e4ae70;
   min-width: 180px;
-  height: 50px
+  height: 50px;
   box-shadow: 0px 8px 16px 0px black;
   z-index: 1;
 
@@ -139,8 +139,9 @@ width: 100%;
  .blue1 {
 	border-bottom: 0px solid rgba(239,176,87,1);
 	background-color: rgba(239,176,87,1);
-	height: 80px;
-	background-image: url(../img/default1.JPG);
+	height: 83px;
+  margin-top: 3.4px;
+	background-image: url(../img/bank3a.png);
 	background-size: 300px 70px;
 	background-repeat: no-repeat;
 	font-family: calibri;

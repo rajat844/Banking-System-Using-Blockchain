@@ -15,8 +15,8 @@
   },
   "dependencies": {
     "abi-decoder": "^2.3.0",
-    "axios": "^0.19.2",
-    "bcrypt": "^4.0.1",
+    "axios": "^0.21.4",
+    "bcrypt": "^5.0.1",
     "bcrypt-nodejs": "0.0.3",
     "bignumber.js": "^9.0.0",
     "body-parser": "^1.19.0",
@@ -35,7 +35,6 @@
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "promise": "^8.1.0",
-    "solc": "^0.8.7-fixed",
     "web3": "^1.2.8"
   }
 }

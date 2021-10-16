@@ -15,6 +15,7 @@ const BigNumber = require('bignumber.js');
 var ethers = require('ethers');
 var provider = ethers.getDefaultProvider('rinkeby');
 
+
 const abiDecoder = require('abi-decoder');
 const InputDataDecoder = require('ethereum-input-data-decoder');
 const initializePassport = require('./passport-config');
@@ -147,17 +148,17 @@ app.use(bodyParser.json());
 var mysqlConnection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '12345',
-    database: 'usersdb',
+    password: 'rajatadmin',
+    database: 'banking',
     port: '3306',
-    multipleStatements: true
+    multipleStatements: true,
 });
 
 mysqlConnection.connect((err) =>{
   if(!err)
     console.log('db connection succeeded');
   else
-    console.log('db connection failed');
+    console.log(err);
 });
 
 //DATABASE CONNECTIONS END --------------------------------------------------------------------------------------
@@ -409,7 +410,7 @@ app.post('/fundsTransfer', (req, res) => {
     if (!err)
     {
       amt =parseInt(req.body.amount);
-      // console.log('amt req: ',amt);
+      console.log('amt req: ',amt);
       var senderBal=rows[0].Balance;
       console.log("sender's balance: ", rows[0].Balance);
 
@@ -800,7 +801,7 @@ app.get('/admin', (req, res) => {
 
 app.post('/admin', (req,res) => {
 
-  if(req.body.username=='admin' && req.body.password=='0000000'){
+  if(req.body.username=='rajat' && req.body.password=='rajatadmin'){
     adminSession = 1;
     res.redirect('/admin_sidebar');
   }
