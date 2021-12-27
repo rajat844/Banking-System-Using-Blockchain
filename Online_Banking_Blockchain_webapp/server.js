@@ -22,6 +22,7 @@ const initializePassport = require('./passport-config');
 
 const axios = require('axios');
 const Etherscan = require('node-etherscan-api');
+//proof of work using block chain
 const TOKEN_API = 'NVB7ZC1WEES9RP7ZMZ2AHWHTYWNKH8KN2B';
 const eth = new Etherscan(TOKEN_API);
 var myAddr = '0xE88a04C76C97781020D00A9d0F4b279d8387374d';
@@ -32,7 +33,10 @@ const fetch = require('node-fetch');
 let urlToGetTransactions = "http://api-rinkeby.etherscan.io/api?module=account&action=txlist&address=0xE88a04C76C97781020D00A9d0F4b279d8387374d&startblock=0&endblock=99999999&sort=asc&apikey=NVB7ZC1WEES9RP7ZMZ2AHWHTYWNKH8KN2B";
 var urlToGetBalance="https://api-rinkeby.etherscan.io/api?module=account&action=balance&address=0xE88a04C76C97781020D00A9d0F4b279d8387374d&tag=latest&apikey=NVB7ZC1WEES9RP7ZMZ2AHWHTYWNKH8KN2B";
 
-//SETTING UP CONNECTION WITH SMART CONTRACT and BLOCKCHAIN
+// address=0xE88a04C76C97781020D00A9d0F4b279d8387374d
+// apikey=NVB7ZC1WEES9RP7ZMZ2AHWHTYWNKH8KN2B
+
+//SETTING UP CONNECTION WITH SMART CONTRACT and BLOCKCHAIN?
 var address='0xbe2b3DdC939f26A37D701fe461d8829114E4EeF3'; //my contract's address
 var abi=[
 	{
@@ -222,6 +226,9 @@ app.post('/registration', checkNotAuthenticated, async (req, res) => {
   try {
     if (req.body.password === req.body.ConfirmPassword) 
     {
+      // here 10 is the number of times we do the salting
+      // Hashing of the Password Using Salting by the help of Bycrypt npm package and hash function ****************
+
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
         
         let sql = 'INSERT INTO b_users SET ?'
@@ -279,20 +286,6 @@ app.post('/registration', checkNotAuthenticated, async (req, res) => {
   }
 })
 //END registration-------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //hard code pages*********************************************************************************************
 app.get('/ATM-location', (req, res) => {
@@ -528,7 +521,6 @@ app.get('/BillPayment', (req, res) => {
 })
 
 app.post('/BillPayment', (req, res) => {
-
   var amt;
   var remaining_amt;
 
@@ -586,15 +578,12 @@ app.post('/BillPayment', (req, res) => {
             sendPromise.then(function(tx){
 
             console.log(tx);
-        
             // res.render('fundsTransfer-res.ejs', { name: req.user.name});   
    });
 
           }  
         });
         res.render('fundsTransfer-res.ejs', { name: req.user.name})    
-      
-
       }
     }
     else
@@ -654,7 +643,6 @@ app.post('/order-chquebook', checkAuthenticated, (req, res) => {
       else{
         //
           //successful transaction
-
           console.log('sender: ', req.user.AccountNum);
           console.log('amount: ', req.body.Leaves);
 
@@ -673,13 +661,11 @@ app.post('/order-chquebook', checkAuthenticated, (req, res) => {
       }
     
       }, 1000);
-
  //-- 
   
 });
 
 //END order chequebook---------------------------------------
-
 //START change password---------------------------------------------------------------------
 
 app.get('/change-password', checkAuthenticated, (req, res) => {
@@ -750,7 +736,6 @@ setTimeout(function () {
 })
 
 //END change password---------------------------------------------------------------
-
 //START bank-statement--------------------------------------------------------------
 
 app.get('/bank-statement', checkAuthenticated, (req, res) => {
@@ -784,6 +769,7 @@ fetch(urlToGetTransactions, settings)
       txFromBlockchain=json1;
 });
  
+ 
 let settings1 = { method: "Get" };
 fetch(urlToGetBalance, settings1)
     .then(res => res.json())
@@ -812,7 +798,6 @@ app.post('/admin', (req,res) => {
 })
 
 app.get('/admin_sidebar', (req,res) => {
-
   if(adminSession===1){
     res.render('admin_sidebar.ejs', {Balance: etherValue});
   }
@@ -824,8 +809,6 @@ app.get('/admin_sidebar', (req,res) => {
 
 //funds transfer records
 app.get('/MoneyRecordsBlockchain', (req,res) => {
-
-
   fetch(urlToGetTransactions, settings)
     .then(res => res.json())
     .then((json1) => {
@@ -929,9 +912,7 @@ app.get('/MoneyRecordsBlockchain', (req,res) => {
   if(adminSession===1){
     var count=txFromBlockchain.result.length;
     var count=parseInt(count);
-
     var FT='<table class="table table-striped" style="width: 100%; padding: 15px; text-align: left; border-collapse: collapse;";   >';
-
     FT += '<tr>';
       FT += '<th style="border: 1px solid #ddd;padding: 8px; padding-top: 12px;padding-bottom: 12px;background-color: #EA7727;">'+'DATE AND TIME'+'</th>';
       FT += '<th style="border: 1px solid #ddd;padding: 8px; padding-top: 12px;padding-bottom: 12px;background-color: #EA7727;">'+'SENDER'+'</th>';
@@ -942,6 +923,7 @@ app.get('/MoneyRecordsBlockchain', (req,res) => {
     for (i=0;i<count;i++){
       
       //timestamp
+
       var date = txFromBlockchain.result[i].timeStamp;
       var date1 = new Date(date*1000);
 
@@ -951,7 +933,6 @@ app.get('/MoneyRecordsBlockchain', (req,res) => {
       if(decodedData1!=undefined){
 //        console.log('tx: ',decodedData1);
         if(decodedData1.name=="transferFunds"){
-
           namee= JSON.parse(JSON.stringify(decodedData1.name));
           paramss0= JSON.parse(JSON.stringify(decodedData1.params[0]));             
           paramss1= JSON.parse(JSON.stringify(decodedData1.params[1]));             
@@ -1134,10 +1115,7 @@ app.get('/BillRecordsBlockchain', (req,res) => {
   }
   else{
     res.render('login.ejs');
-
-  }
-
-  
+  }  
 })
 
 //checkbook records
@@ -1302,3 +1280,22 @@ var server;
 server= app.listen(3000,() => {
   console.log('app is running on 3000 port');
 })
+
+// contract hashing123456 {
+//   let timestamp = timeStamp;
+
+//   let hashes = txFromBlockchain.BigNumber
+
+//   let salt_hash = "f2432548167565cfa7425730433823924"; // or take any random value
+//    public requested_hash; 
+  
+//    function hashed123456() public {
+//      requested_hash = msg.sender;
+//    }
+
+// function show_ public {
+//    let combination_hash = generate_bycrpt_of_hashes(hashes, msg.sender) 
+//    let hashedvalue = crypt_hash(combination_hash, timestamp, salt_hash); 
+// }
+
+// }
